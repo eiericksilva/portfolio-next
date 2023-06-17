@@ -52,6 +52,8 @@ const WrapperLogo = styled.div`
 
 const Menu = styled(motion.ul)`
   list-style: none;
+  display: flex;
+  z-index: 10;
 
   @media (max-width: 850px) {
     display: none;
@@ -78,6 +80,8 @@ const Menu = styled(motion.ul)`
 
 const MenuMobile = styled(motion.ul)`
   width: 100vw;
+  z-index: 10;
+  background-color: white;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 
   position: absolute;

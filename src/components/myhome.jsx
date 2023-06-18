@@ -4,9 +4,9 @@ import React from "react";
 import { styled } from "styled-components";
 import Button from "./button";
 import { HiArrowDown } from "react-icons/hi";
-
 const Container = styled.div`
-  height: 100vh;
+  min-height: 100%;
+  padding: 50px 0;
   background: linear-gradient(
       to right,
       rgba(245, 245, 245, 0.8),
@@ -19,17 +19,21 @@ const TagMain = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 20px;
   gap: 20px;
-  padding: 150px 20px;
   max-width: 786px;
   margin: 0 auto;
 
   svg {
-    position: absolute;
-    top: 600px;
+    margin-top: 100px;
   }
+`;
+
+const ContainerHeader = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 `;
 
 const Title = styled.h1`
@@ -52,15 +56,15 @@ const MyHome = () => {
   return (
     <Container>
       <TagMain>
-        <Title>Olá, me chamo Erick Oliveira</Title>
-        <Description>
-          Um Desenvolvedor Full Stack responsável pela criação de Sites e
-          Sistemas focado no crescimento e valorização do seu Produto ou
-          Serviço.{" "}
-        </Description>
-        <div>
-          <Button title="Fale Comigo" />
-        </div>
+        <ContainerHeader>
+          <Title>Olá, me chamo Erick Oliveira</Title>
+          <Description>
+            Um Desenvolvedor Full Stack responsável pela criação de Sites e
+            Sistemas focado no crescimento e valorização do seu Produto ou
+            Serviço.{" "}
+          </Description>
+        </ContainerHeader>
+        <Button title="Fale Comigo" />
         <HiArrowDown />
       </TagMain>
     </Container>

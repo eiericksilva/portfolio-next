@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { AiFillLinkedin, AiFillInstagram, AiFillGithub } from "react-icons/ai";
 import { styled } from "styled-components";
@@ -16,12 +17,7 @@ const Wrapper = styled.div`
 
     span {
       font-weight: 700;
-      text-decoration: underline;
-      cursor: pointer;
-
-      &:hover {
-        color: var(--bg-accent);
-      }
+      color: var(--bg-accent);
     }
   }
 `;
@@ -93,7 +89,7 @@ const Right = styled.div`
 `;
 const Footer = () => {
   return (
-    <Wrapper>
+    <Wrapper id="footer">
       <Container>
         <Left>
           <h1>ERICK OLIVEIRA</h1>
@@ -106,19 +102,26 @@ const Footer = () => {
           <h1>MÍDIAS SOCIAIS</h1>
           <ul>
             <li>
-              <a href="">
+              <Link
+                href="https://www.linkedin.com/in/eiericksilva/"
+                target="_blank"
+              >
                 <AiFillLinkedin size={30} />
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="">
+              <Link
+                href="https://www.instagram.com/eiericksilva.dev/"
+                target="_blank"
+              >
                 <AiFillInstagram size={30} />
-              </a>
+              </Link>
+              <a href=""></a>
             </li>
             <li>
-              <a href="">
+              <Link href="https://github.com/eiericksilva" target="_blank">
                 <AiFillGithub size={30} />
-              </a>
+              </Link>
             </li>
           </ul>
         </Right>

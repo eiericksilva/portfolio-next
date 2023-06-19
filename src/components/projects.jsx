@@ -3,7 +3,10 @@ import React from "react";
 import { styled } from "styled-components";
 import Dermato from "../../public/dermato-1600-969.png";
 import Polpee from "../../public/polpee-1600-969.png";
+import DermatoMobile from "../../public/dermato-mobile-521-762.png";
+import PolpeeMobile from "../../public/por.png";
 import Button from "./button";
+import Link from "next/link";
 
 const Wrapper = styled.div``;
 
@@ -70,7 +73,24 @@ const Description = styled.p`
   margin-bottom: 50px;
 `;
 
-const ContainerLeft = styled.div``;
+const ContainerLeft = styled.div`
+  display: flex;
+  margin: 0 auto;
+
+  .img-mobile {
+    display: none;
+
+    @media (max-width: 650px) {
+      display: block;
+    }
+  }
+
+  .img-desktop {
+    @media (max-width: 650px) {
+      display: none;
+    }
+  }
+`;
 
 const ContainerRight = styled.div`
   display: flex;
@@ -86,7 +106,7 @@ const ProjectsWrapper = styled.div`
 
 const Projects = () => {
   return (
-    <Wrapper>
+    <Wrapper id="projects">
       <Header>
         <Title>Projetos</Title>
         <div className="divider"></div>
@@ -99,7 +119,18 @@ const Projects = () => {
       <ProjectsWrapper>
         <ContainerProject>
           <ContainerLeft>
-            <Image src={Dermato} width={600} alt="Dermato banner"></Image>
+            <Image
+              className="img-desktop"
+              src={Dermato}
+              width={600}
+              alt="Dermato banner"
+            ></Image>
+            <Image
+              className="img-mobile"
+              src={DermatoMobile}
+              width={400}
+              alt="Dermato banner"
+            ></Image>
           </ContainerLeft>
           <ContainerRight>
             <Subtitle>Landing Page DERMATO</Subtitle>
@@ -109,14 +140,25 @@ const Projects = () => {
               mim e sempre pensando no seu modelo adaptável para o tamanho de
               todos os dispositivos.
             </Description>
-            <div>
+            <Link href="https://dermato.vercel.app/" target="_blank">
               <Button title="VEJA O PROJETO" />
-            </div>
+            </Link>
           </ContainerRight>
         </ContainerProject>
         <ContainerProject>
           <ContainerLeft>
-            <Image src={Polpee} width={600} alt="Polpee banner"></Image>
+            <Image
+              className="img-desktop"
+              src={Polpee}
+              width={600}
+              alt="Polpee banner"
+            ></Image>
+            <Image
+              className="img-mobile"
+              src={PolpeeMobile}
+              width={300}
+              alt="Polpee banner"
+            ></Image>
           </ContainerLeft>
           <ContainerRight>
             <Subtitle>Página de Afiliados da Polpee</Subtitle>
@@ -126,7 +168,9 @@ const Projects = () => {
               Tailwind.
             </Description>
             <div>
-              <Button title="VEJA O PROJETO" />
+              <Link href="https://polpee.club/afiliados" target="_blank">
+                <Button title="VEJA O PROJETO" />
+              </Link>
             </div>
           </ContainerRight>
         </ContainerProject>

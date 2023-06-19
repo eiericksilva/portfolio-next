@@ -89,7 +89,7 @@ const ContainerForm = styled.form`
 
 const Contacts = () => {
   return (
-    <Container>
+    <Container id="contacts">
       <Header>
         <Title>Contatos</Title>
         <div className="divider"></div>

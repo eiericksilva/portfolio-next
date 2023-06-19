@@ -2,6 +2,7 @@
 import React from "react";
 import Button from "./button";
 import { styled } from "styled-components";
+import Link from "next/link";
 
 const Container = styled.div`
   padding: 30px 0;
@@ -119,7 +120,7 @@ const ContainerRight = styled.div`
 
 const About = () => {
   return (
-    <Container>
+    <Container id="about">
       <Header>
         <Title>Sobre Mim</Title>
         <div className="divider"></div>
@@ -154,7 +155,9 @@ const About = () => {
             <span>falar comigo</span>.
           </p>
           <div className="containerButton">
-            <Button title="CONTATOS" />
+            <Link href="/#contacts">
+              <Button title="CONTATOS" />
+            </Link>
           </div>
         </ContainerLeft>
         <ContainerRight>

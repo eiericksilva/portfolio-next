@@ -4,6 +4,7 @@ import React from "react";
 import { styled } from "styled-components";
 import Button from "./button";
 import { HiArrowDown } from "react-icons/hi";
+import Link from "next/link";
 const Container = styled.div`
   min-height: 100%;
   padding: 50px 0;
@@ -54,7 +55,7 @@ const Description = styled.p`
 
 const MyHome = () => {
   return (
-    <Container>
+    <Container id="home">
       <TagMain>
         <ContainerHeader>
           <Title>Olá, me chamo Erick Oliveira</Title>
@@ -64,7 +65,9 @@ const MyHome = () => {
             Serviço.{" "}
           </Description>
         </ContainerHeader>
-        <Button title="Fale Comigo" />
+        <Link href="/#contacts">
+          <Button title="Fale Comigo" />
+        </Link>
         <HiArrowDown />
       </TagMain>
     </Container>

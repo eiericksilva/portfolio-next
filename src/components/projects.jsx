@@ -5,6 +5,22 @@ import Dermato from "../../public/dermato-1600-969.png";
 import Polpee from "../../public/polpee-1600-969.png";
 import Button from "./button";
 
+const Wrapper = styled.div``;
+const ContainerProject = styled.div`
+  display: flex;
+  max-width: 80%;
+  margin: 0 auto;
+  gap: 50px;
+
+  @media (max-width: 1080px) {
+    max-width: 95%;
+  }
+
+  @media (max-width: 980px) {
+    flex-direction: column;
+  }
+`;
+
 const Header = styled.div`
   display: flex;
   flex-direction: column;
@@ -52,13 +68,6 @@ const Description = styled.p`
   margin-bottom: 50px;
 `;
 
-const Wrapper = styled.div``;
-const ContainerProject = styled.div`
-  display: flex;
-  max-width: 80%;
-  margin: 0 auto;
-  gap: 50px;
-`;
 const ContainerLeft = styled.div``;
 
 const ContainerRight = styled.div`
@@ -104,6 +113,9 @@ const Projects = () => {
           </ContainerRight>
         </ContainerProject>
         <ContainerProject>
+          <ContainerLeft>
+            <Image src={Polpee} width={600} alt="Polpee banner"></Image>
+          </ContainerLeft>
           <ContainerRight>
             <Subtitle>Página de Afiliados da Polpee</Subtitle>
             <Description>
@@ -115,9 +127,6 @@ const Projects = () => {
               <Button title="VEJA O PROJETO" />
             </div>
           </ContainerRight>
-          <ContainerLeft>
-            <Image src={Polpee} width={600} alt="Polpee banner"></Image>
-          </ContainerLeft>
         </ContainerProject>
       </ProjectsWrapper>
     </Wrapper>

@@ -1,6 +1,8 @@
 "use client";
 
 import About from "@/components/about";
+import Contacts from "@/components/contacts";
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import MyHome from "@/components/myhome";
 import Projects from "@/components/projects";
@@ -12,6 +14,8 @@ export default function Home() {
       <MyHome />
       <About />
       <Projects />
+      <Contacts />
+      <Footer />
     </main>
   );
 }

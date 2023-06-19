@@ -6,11 +6,13 @@ import Polpee from "../../public/polpee-1600-969.png";
 import Button from "./button";
 
 const Wrapper = styled.div``;
+
 const ContainerProject = styled.div`
   display: flex;
   max-width: 80%;
   margin: 0 auto;
   gap: 50px;
+  padding: 20px 0;
 
   @media (max-width: 1080px) {
     max-width: 95%;

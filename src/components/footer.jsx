@@ -5,7 +5,7 @@ import { styled } from "styled-components";
 const Wrapper = styled.div`
   background-color: black;
   color: white;
-  height: 300px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
 
@@ -33,8 +33,12 @@ const Container = styled.footer`
   gap: 50px;
   padding: 30px;
   justify-content: space-between;
-
   border-bottom: 1px solid #eeeeee32;
+
+  @media (max-width: 980px) {
+    width: 95%;
+    flex-direction: column;
+  }
 `;
 
 const Left = styled.div`
@@ -42,6 +46,10 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @media (max-width: 980px) {
+    width: 100%;
+  }
 
   h1 {
     font-size: 17px;
@@ -61,6 +69,10 @@ const Right = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @media (max-width: 980px) {
+    width: 100%;
+  }
 
   h1 {
     font-size: 17px;
@@ -86,9 +98,8 @@ const Footer = () => {
         <Left>
           <h1>ERICK OLIVEIRA</h1>
           <p>
-            Um Desenvolvedor Full Stack responsável pela criação de Sites e
-            Sistemas focado no crescimento e valorização do seu Produto ou
-            Serviço.
+            Um Desenvolvedor responsável pela criação de Sites e Sistemas focado
+            no crescimento e valorização do seu Produto ou Serviço.
           </p>
         </Left>
         <Right>

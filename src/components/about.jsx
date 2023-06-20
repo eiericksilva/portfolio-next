@@ -17,27 +17,14 @@ const Header = styled.div`
   max-width: 786px;
   margin: 0 auto;
 
+  p {
+    text-align: center;
+  }
+
   .divider {
     width: 20%;
     border: 2px solid var(--bg-accent);
   }
-
-  p {
-    text-align: center;
-    line-height: 1.6;
-    letter-spacing: 1px;
-    font-size: 14px;
-  }
-`;
-
-const Title = styled.h1`
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-size: 30px;
-  color: black;
-  text-align: center;
-  padding: 0 20px;
 `;
 
 const Subtitle = styled.h3`
@@ -76,10 +63,6 @@ const ContainerLeft = styled.div`
     letter-spacing: 1px;
     font-size: 14px;
 
-    span {
-      font-weight: 700;
-    }
-
     .linkedin {
       color: var(--bg-accent);
       text-decoration: underline;
@@ -108,8 +91,8 @@ const ContainerRight = styled.div`
     flex-wrap: wrap;
 
     li {
-      background-color: #e0f2e9;
-      color: #111;
+      background-color: #4cbafa29;
+      color: black;
       padding: 10px;
       font-size: 14px;
       border-radius: 5px;
@@ -122,7 +105,7 @@ const About = () => {
   return (
     <Container id="about">
       <Header>
-        <Title>Sobre Mim</Title>
+        <h1>Sobre Mim</h1>
         <div className="divider"></div>
         <p>
           Aqui você vai encontrar mais informações sobre mim, o que eu faço e
@@ -144,8 +127,10 @@ const About = () => {
             Além disso, gosto de compartilhar coisas relacionadas ao que estou
             aprendendo e aprendi ao longo da minha jornada para trocar
             infomações com outros pessoas. Fique a vontade para me seguir no{" "}
-            <span className="linkedin">Linkedin</span> para acompanhar o que
-            posto e trocar uma ideia comigo!
+            <span className="linkedin">
+              <Link href="/#footer">Linkedin</Link>
+            </span>{" "}
+            para acompanhar o que posto e trocar uma ideia comigo!
           </p>
           <p>
             Estou aberto para oportunidades de <span>trabalho</span> onde eu

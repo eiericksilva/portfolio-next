@@ -8,6 +8,8 @@ import { GrMenu, GrClose } from "react-icons/gr";
 import { AnimatePresence } from "framer-motion";
 import Menu from "./menu";
 import MenuMobile from "./menu-mobile";
+import Link from "next/link";
+import IconWhatsApp from "../../public/IconWhats.png";
 
 const TagHeader = styled.header`
   display: flex;
@@ -28,6 +30,17 @@ const TagHeader = styled.header`
     }
   }
 
+  .whatsapp-btn {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+
+    &:hover {
+      transform: perspective(4cm) rotateX(-15deg) rotateY(30deg);
+      transition: 0.5s;
+    }
+  }
+
   @media (max-width: 1024px) {
     padding: 5px 25px;
   }
@@ -45,7 +58,6 @@ const WrapperLogo = styled.div`
 
   h1 {
     font-size: 18px;
-    font-weight: 700;
     margin-left: 12px;
     color: var(--bg-gray);
     letter-spacing: 1px;
@@ -59,19 +71,30 @@ const Header = () => {
   }
 
   return (
-    <TagHeader id="header">
-      <WrapperLogo>
-        <Image src={MyPhoto} width={50} height={50} alt="Minha foto"></Image>
-        <h1>ERICK OLIVEIRA</h1>
-      </WrapperLogo>
-      <Menu />
-      {menuMobileIsVisible ? (
-        <GrClose onClick={handleMenu} />
-      ) : (
-        <GrMenu onClick={handleMenu} />
-      )}
-      <AnimatePresence>{menuMobileIsVisible && <MenuMobile />}</AnimatePresence>
-    </TagHeader>
+    <>
+      <TagHeader id="header">
+        <WrapperLogo>
+          <Image src={MyPhoto} width={50} height={50} alt="Minha foto"></Image>
+          <h1>ERICK OLIVEIRA</h1>
+        </WrapperLogo>
+        <Menu />
+        {menuMobileIsVisible ? (
+          <GrClose onClick={handleMenu} />
+        ) : (
+          <GrMenu onClick={handleMenu} />
+        )}
+        <AnimatePresence>
+          {menuMobileIsVisible && <MenuMobile />}
+        </AnimatePresence>
+        <Link
+          className="whatsapp-btn"
+          href="https://api.whatsapp.com/send?phone=5533999501882&text=Ol%C3%A1,%20Erick!%20Vim%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20com%20voc%C3%AA."
+          target="_blank"
+        >
+          <Image src={IconWhatsApp} width={70} alt="Icone WhatsApp"></Image>
+        </Link>
+      </TagHeader>
+    </>
   );
 };
 

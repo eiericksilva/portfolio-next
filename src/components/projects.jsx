@@ -35,6 +35,11 @@ const Header = styled.div`
   max-width: 786px;
   margin: 0 auto;
 
+  h1 {
+    text-align: center;
+    padding: 0 20px;
+  }
+
   .divider {
     width: 20%;
     border: 2px solid var(--bg-accent);
@@ -42,35 +47,7 @@ const Header = styled.div`
 
   p {
     text-align: center;
-    line-height: 1.6;
-    letter-spacing: 1px;
-    font-size: 14px;
   }
-`;
-
-const Title = styled.h1`
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-size: 30px;
-  color: black;
-  text-align: center;
-  padding: 0 20px;
-`;
-
-const Subtitle = styled.h3`
-  font-weight: 800;
-  color: black;
-  text-transform: capitalize;
-  font-size: 20px;
-  margin-bottom: 10px;
-`;
-
-const Description = styled.p`
-  line-height: 1.6;
-  letter-spacing: 1px;
-  font-size: 14px;
-  margin-bottom: 50px;
 `;
 
 const ContainerLeft = styled.div`
@@ -96,6 +73,14 @@ const ContainerRight = styled.div`
   display: flex;
   flex-direction: column;
   margin: auto;
+
+  p {
+    margin-bottom: 50px;
+
+    .polpee-description {
+      color: blue;
+    }
+  }
 `;
 
 const ProjectsWrapper = styled.div`
@@ -108,7 +93,7 @@ const Projects = () => {
   return (
     <Wrapper id="projects">
       <Header>
-        <Title>Projetos</Title>
+        <h1>Projetos</h1>
         <div className="divider"></div>
         <p>
           Aqui você encontrará alguns dos meus projetos tanto desenvolvidos para
@@ -133,13 +118,17 @@ const Projects = () => {
             ></Image>
           </ContainerLeft>
           <ContainerRight>
-            <Subtitle>Landing Page DERMATO</Subtitle>
-            <Description>
-              DERMATO é uma Landing Page desenvolvida por mim através de um
-              Protótipo do Figma da Web. Seu código foi desenvolvido do zero por
-              mim e sempre pensando no seu modelo adaptável para o tamanho de
-              todos os dispositivos.
-            </Description>
+            <h3>Landing Page DERMATO</h3>
+            <p>
+              DERMATO é uma <span>Landing Page</span> em que eu criei um código
+              totalmente personalizado e <span>otimizado</span> para fornecer
+              uma melhor experiência ao usuário. Esse projeto é totalmente{" "}
+              <span>responsivo</span>, ou seja, adaptável para o tamanho de
+              todos os dispositivos. Esse tipo de Site é feito essencialmente
+              para ser a {`"vitrine"`} do seu serviço. Nele é possível colocar
+              as principais informações sobre o serviço que você ou sua empresa
+              presta, além de localização, valores, contatos, entre outros...
+            </p>
             <Link href="https://dermato.vercel.app/" target="_blank">
               <Button title="VEJA O PROJETO" />
             </Link>
@@ -161,12 +150,19 @@ const Projects = () => {
             ></Image>
           </ContainerLeft>
           <ContainerRight>
-            <Subtitle>Página de Afiliados da Polpee</Subtitle>
-            <Description>
-              Página de afiliados do site da Polpee; primeira assinatura de
-              polpas do Brasil. Desenvolvida utilizando NextJS, TypeScript e
-              Tailwind.
-            </Description>
+            <h3>Polpee: Página de Afiliados</h3>
+            <p>
+              A Página de afiliados do site da Polpee;{" "}
+              <span className="polpee-description">
+                primeira assinatura de polpas do Brasil
+              </span>
+              , foi desenvolvida por mim para integrar o restante do site da
+              empresa. Nela é possível encontrar informações referêntes a como
+              se tornar um afiliado da Polpee. O site é feito com{" "}
+              <span>NextJS</span>, então utilizei as bibliotecas{" "}
+              <span>TailwindCSS</span> para estilização e{" "}
+              <span>TypeScript</span> para lidar com a tipagem dos dados.
+            </p>
             <div>
               <Link href="https://polpee.club/afiliados" target="_blank">
                 <Button title="VEJA O PROJETO" />

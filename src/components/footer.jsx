@@ -1,6 +1,11 @@
 import Link from "next/link";
 import React from "react";
-import { AiFillLinkedin, AiFillInstagram, AiFillGithub } from "react-icons/ai";
+import {
+  AiFillLinkedin,
+  AiFillInstagram,
+  AiFillGithub,
+  AiOutlineWhatsApp,
+} from "react-icons/ai";
 import { styled } from "styled-components";
 
 const Wrapper = styled.div`
@@ -35,6 +40,11 @@ const Container = styled.footer`
     width: 95%;
     flex-direction: column;
   }
+
+  h1 {
+    font-size: 17px;
+    color: white;
+  }
 `;
 
 const Left = styled.div`
@@ -47,12 +57,6 @@ const Left = styled.div`
     width: 100%;
   }
 
-  h1 {
-    font-size: 17px;
-    text-transform: uppercase;
-    font-weight: 700;
-  }
-
   p {
     color: #eee;
     line-height: 1.6;
@@ -60,6 +64,7 @@ const Left = styled.div`
     font-size: 14px;
   }
 `;
+
 const Right = styled.div`
   width: 20%;
   display: flex;
@@ -68,12 +73,6 @@ const Right = styled.div`
 
   @media (max-width: 980px) {
     width: 100%;
-  }
-
-  h1 {
-    font-size: 17px;
-    text-transform: uppercase;
-    font-weight: 700;
   }
 
   ul {
@@ -116,11 +115,18 @@ const Footer = () => {
               >
                 <AiFillInstagram size={30} />
               </Link>
-              <a href=""></a>
             </li>
             <li>
               <Link href="https://github.com/eiericksilva" target="_blank">
                 <AiFillGithub size={30} />
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://api.whatsapp.com/send?phone=5533999501882&text=Ol%C3%A1,%20Erick!%20Vim%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20com%20voc%C3%AA."
+                target="_blank"
+              >
+                <AiOutlineWhatsApp size={30} />
               </Link>
             </li>
           </ul>

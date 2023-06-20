@@ -5,6 +5,7 @@ import { styled } from "styled-components";
 import Button from "./button";
 import { HiArrowDown } from "react-icons/hi";
 import Link from "next/link";
+
 const Container = styled.div`
   min-height: 100%;
   padding: 50px 0;
@@ -35,22 +36,16 @@ const ContainerHeader = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
+
+  p {
+    text-align: center;
+  }
 `;
 
 const Title = styled.h1`
   font-weight: 800;
-  text-transform: uppercase;
   font-size: 40px;
-  color: black;
   text-align: center;
-  padding: 0 20px;
-`;
-
-const Description = styled.p`
-  text-align: center;
-  line-height: 1.6;
-  letter-spacing: 1px;
-  font-size: 14px;
 `;
 
 const MyHome = () => {
@@ -59,11 +54,11 @@ const MyHome = () => {
       <TagMain>
         <ContainerHeader>
           <Title>Olá, me chamo Erick Oliveira</Title>
-          <Description>
+          <p>
             Um Desenvolvedor Full Stack responsável pela criação de Sites e
             Sistemas focado no crescimento e valorização do seu Produto ou
             Serviço.{" "}
-          </Description>
+          </p>
         </ContainerHeader>
         <Link href="/#contacts">
           <Button title="Fale Comigo" />

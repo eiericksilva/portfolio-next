@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import React from "react";
 import Button from "./button";
+import { useForm } from "react-hook-form";
 
 const Container = styled.div`
   min-height: 100%;
@@ -28,9 +29,6 @@ const Header = styled.div`
 
   p {
     text-align: center;
-    line-height: 1.6;
-    letter-spacing: 1px;
-    font-size: 14px;
   }
 `;
 
@@ -87,7 +85,13 @@ const ContainerForm = styled.form`
   }
 `;
 
-const Contacts = () => {
+const Contacts = (ref) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
   return (
     <Container id="contacts">
       <Header>
@@ -99,16 +103,33 @@ const Contacts = () => {
           possível.
         </p>
       </Header>
-      <ContainerForm>
+      <ContainerForm onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="name">Nome</label>
-        <input type="text" placeholder="Insira Seu Nome" id="name" />
+        <input
+          type="text"
+          placeholder="Insira Seu Nome"
+          id="name"
+          ref={ref}
+          {...register("name")}
+        />
         <label htmlFor="email">E-mail</label>
-        <input type="text" placeholder="Insira Seu Email" id="email" />
+        <input
+          type="text"
+          placeholder="Insira Seu Email"
+          id="email"
+          ref={ref}
+          {...register("email")}
+        />
         <label htmlFor="message">Mensagem</label>
-        <textarea type="text" placeholder="Insira Sua Mensagem" id="message" />
-        <div>
-          <Button title="Enviar Mensagem"></Button>
-        </div>
+        <textarea
+          type="text"
+          placeholder="Insira Sua Mensagem"
+          id="message"
+          ref={ref}
+          {...register("message")}
+        />
+
+        <Button title="Enviar Mensagem" type="submit" />
       </ContainerForm>
     </Container>
   );

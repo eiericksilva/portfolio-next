@@ -125,23 +125,21 @@ const About = () => {
           </p>
           <p>
             Além disso, gosto de compartilhar coisas relacionadas ao que estou
-            aprendendo e aprendi ao longo da minha jornada para trocar
-            infomações com outros pessoas. Fique a vontade para me seguir no{" "}
+            aprendendo ao longo da carreira para trocar conhecimento com pessoas
+            de várias áreas. Me siga no{" "}
             <span className="linkedin">
               <Link href="/#footer">Linkedin</Link>
             </span>{" "}
-            para acompanhar o que posto e trocar uma ideia comigo!
+            e saiba mais.
           </p>
           <p>
-            Estou aberto para oportunidades de <span>trabalho</span> onde eu
-            possa, além de contribuir com o que sei, aprender mais e a crescer
-            com novas experiências no mercado. Se você tem uma boa oportunidade
-            e acha que meu perfil se encaixa com o que procura, não hesite em{" "}
-            <span>falar comigo</span>.
+            Gostou do meu perfil e eu posso te ajudar a solucionar o seu
+            problema? não hesite em <span>falar comigo</span> para eu te ajudar
+            encarar novos desafios.
           </p>
           <div className="containerButton">
             <Link href="/#contacts">
-              <Button title="CONTATOS" />
+              <Button title="Solicite um Orçamento" />
             </Link>
           </div>
         </ContainerLeft>

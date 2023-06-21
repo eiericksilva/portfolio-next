@@ -76,10 +76,6 @@ const ContainerRight = styled.div`
 
   p {
     margin-bottom: 50px;
-
-    .polpee-description {
-      color: blue;
-    }
   }
 `;
 
@@ -94,12 +90,8 @@ const Projects = () => {
     <Wrapper id="projects">
       <Header>
         <h1>Projetos</h1>
-        <div className="divider"></div>
-        <p>
-          Aqui você encontrará alguns dos meus projetos tanto desenvolvidos para
-          clientes, quanto projetos de estudo. Cada projeto contem uma descrição
-          dele e uma explicação simples sobre cada ferramenta utilizada.
-        </p>
+        <div className="divider" />
+        <p>Aqui você encontrará alguns dos projetos desenvolvidos por mim.</p>
       </Header>
       <ProjectsWrapper>
         <ContainerProject>
@@ -153,15 +145,13 @@ const Projects = () => {
             <h3>Polpee: Página de Afiliados</h3>
             <p>
               A Página de afiliados do site da Polpee;{" "}
-              <span className="polpee-description">
-                primeira assinatura de polpas do Brasil
-              </span>
-              , foi desenvolvida por mim para integrar o restante do site da
-              empresa. Nela é possível encontrar informações referêntes a como
-              se tornar um afiliado da Polpee. O site é feito com{" "}
-              <span>NextJS</span>, então utilizei as bibliotecas{" "}
-              <span>TailwindCSS</span> para estilização e{" "}
-              <span>TypeScript</span> para lidar com a tipagem dos dados.
+              <span>primeira assinatura de polpas do Brasil</span>, foi
+              desenvolvida por mim para integrar o restante do site da empresa.
+              Nela é possível encontrar informações referêntes a como se tornar
+              um afiliado da Polpee. O site é feito com <span>NextJS</span>,
+              então utilizei as bibliotecas <span>TailwindCSS</span> para
+              estilização e <span>TypeScript</span> para lidar com a tipagem dos
+              dados.
             </p>
             <div>
               <Link href="https://polpee.club/afiliados" target="_blank">

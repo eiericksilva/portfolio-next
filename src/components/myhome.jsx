@@ -55,13 +55,13 @@ const MyHome = () => {
         <ContainerHeader>
           <Title>Olá, me chamo Erick Oliveira</Title>
           <p>
-            Um Desenvolvedor Full Stack responsável pela criação de Sites e
-            Sistemas focado no crescimento e valorização do seu Produto ou
-            Serviço.{" "}
+            Programador responsável pela criação de Sites e Sistemas focado no
+            crescimento no meio digital das pequenas e médias empresas. É isso
+            que procura? Então não perca tempo e entre em contato comigo.{" "}
           </p>
         </ContainerHeader>
         <Link href="/#contacts">
-          <Button title="Fale Comigo" />
+          <Button title="Vamos fazer um projeto juntos" />
         </Link>
         <HiArrowDown />
       </TagMain>

@@ -112,24 +112,16 @@ const Contacts = (ref) => {
           ref={ref}
           {...register("name")}
         />
-        <label htmlFor="email">E-mail</label>
+        <label htmlFor="email">Celular</label>
         <input
           type="text"
-          placeholder="Insira Seu Email"
-          id="email"
+          placeholder="Insira Seu Celular"
+          id="celular"
           ref={ref}
-          {...register("email")}
-        />
-        <label htmlFor="message">Mensagem</label>
-        <textarea
-          type="text"
-          placeholder="Insira Sua Mensagem"
-          id="message"
-          ref={ref}
-          {...register("message")}
+          {...register("celular")}
         />
 
-        <Button title="Enviar Mensagem" type="submit" />
+        <Button title="Solicitar Orçamento agora" type="submit" />
       </ContainerForm>
     </Container>
   );

@@ -75,7 +75,7 @@ const Header = () => {
       <TagHeader id="header">
         <WrapperLogo>
           <Image src={MyPhoto} width={50} height={50} alt="Minha foto"></Image>
-          <h1>ERICK OLIVEIRA</h1>
+          <h1>ERICK SILVA</h1>
         </WrapperLogo>
         <Menu />
         {menuMobileIsVisible ? (

@@ -91,7 +91,7 @@ const Footer = () => {
     <Wrapper id="footer">
       <Container>
         <Left>
-          <h1>ERICK OLIVEIRA</h1>
+          <h1>ERICK SILVA</h1>
           <p>Programador responsável pela criação de Sites e Sistemas.</p>
         </Left>
         <Right>
@@ -135,7 +135,7 @@ const Footer = () => {
           href="https://api.whatsapp.com/send?phone=5533999501882&text=Ol%C3%A1,%20Erick!%20Vim%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20com%20voc%C3%AA."
           target="_blank"
         >
-          <span>ERICK OLIVEIRA</span>
+          <span>ERICK SILVA</span>
         </Link>
       </div>
     </Wrapper>

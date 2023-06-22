@@ -8,8 +8,8 @@ const sourceSansPro = Source_Code_Pro({
 
 export const metadata = {
   icons: { icon: "https://example.com/icon.png" },
-  title: "eiericksilva.dev",
-  description: "Criado por Erick Oliveira",
+  title: "eiericksilva",
+  description: "Criado por Erick Silva",
 };
 
 export default function RootLayout({ children }) {

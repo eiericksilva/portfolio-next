@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 import React from "react";
 import Button from "./button";
 import { useForm } from "react-hook-form";
+import InputMask from "react-input-mask";
 
 const Container = styled.div`
   min-height: 100%;
@@ -113,7 +114,9 @@ const Contacts = (ref) => {
           {...register("name")}
         />
         <label htmlFor="email">Celular</label>
-        <input
+        <InputMask
+          mask="(99)99999-9999"
+          maskChar=""
           type="text"
           placeholder="Insira Seu Celular"
           id="celular"

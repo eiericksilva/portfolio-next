@@ -117,11 +117,11 @@ const About = () => {
         <ContainerLeft>
           <Subtitle>Vamos lá, quem sou eu!?</Subtitle>
           <p>
-            Me chamo Erick Oliveira, sou um{" "}
-            <span>Desenvolvedor de Websites</span> cujo objetivo principal é te
-            ajudar a melhorar a visbilidade do produto ou serviço por meio da{" "}
-            <span>programação</span>. Você pode encontrar alguns dos meus
-            projetos e cases de estudo na sessão <span>Projetos</span>.
+            Me chamo Erick Silva, sou um <span>Desenvolvedor de Websites</span>{" "}
+            cujo objetivo principal é te ajudar a melhorar a visbilidade do
+            produto ou serviço por meio da <span>programação</span>. Você pode
+            encontrar alguns dos meus projetos e cases de estudo na sessão{" "}
+            <span>Projetos</span>.
           </p>
           <p>
             Além disso, gosto de compartilhar coisas relacionadas ao que estou
@@ -161,6 +161,7 @@ const About = () => {
             <li>ExpressJS</li>
             <li>NodeJS</li>
             <li>Wordpress</li>
+            <li>Crocloblock</li>
           </ul>
         </ContainerRight>
       </Bottom>

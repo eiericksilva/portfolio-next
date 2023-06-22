@@ -53,7 +53,7 @@ const MyHome = () => {
     <Container id="home">
       <TagMain>
         <ContainerHeader>
-          <Title>Olá, me chamo Erick Oliveira</Title>
+          <Title>Olá, me chamo Erick Silva</Title>
           <p>
             Programador responsável pela criação de Sites e Sistemas focado no
             crescimento no meio digital das pequenas e médias empresas. É isso

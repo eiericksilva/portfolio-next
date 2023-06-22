@@ -139,7 +139,7 @@ const About = () => {
           </p>
           <div className="containerButton">
             <Link href="/#contacts">
-              <Button title="Solicite um Orçamento" />
+              <Button title="Solicitar Orçamento" />
             </Link>
           </div>
         </ContainerLeft>

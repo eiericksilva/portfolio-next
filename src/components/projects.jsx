@@ -56,6 +56,7 @@ const ContainerLeft = styled.div`
 
   .img-mobile {
     display: none;
+    max-width: 100%;
 
     @media (max-width: 650px) {
       display: block;

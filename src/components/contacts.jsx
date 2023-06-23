@@ -3,6 +3,11 @@ import React from "react";
 import Button from "./button";
 import { useForm } from "react-hook-form";
 import InputMask from "react-input-mask";
+import { sendContactMail } from "@/services/sendMail";
+import { toast } from "react-hot-toast";
+import { useState } from "react";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 const Container = styled.div`
   min-height: 100%;
@@ -65,20 +70,26 @@ const ContainerForm = styled.form`
     color: #666;
     font-weight: 700;
   }
-  input,
-  textarea {
+  input {
     height: 50px;
     outline: none;
     padding: 10px;
     background-color: #f4f4f4;
-    border: none;
+    border: ${({ isError }) => (isError ? "1px solid red" : "none")};
     color: #333;
-    margin-bottom: 40px;
     border-radius: 5px;
+
+    &::placeholder {
+      color: #4141417b;
+    }
   }
 
-  textarea {
-    height: 250px;
+  .error-message {
+    font-size: 14px;
+    color: red;
+    font-weight: 300;
+    margin-left: 10px;
+    margin-bottom: 30px;
   }
 
   div {
@@ -87,12 +98,52 @@ const ContainerForm = styled.form`
 `;
 
 const Contacts = (ref) => {
+  const schema = yup
+    .object({
+      name: yup.string().required("É obrigatório informar seu nome."),
+      phone_number: yup
+        .string()
+        .matches(/^\(\d{2}\)\d{5}-\d{4}$/, "Celular deve ser do tipo válido"),
+    })
+    .required();
+
+  const [isError, setIsError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+  const onSubmit = async (data) => {
+    try {
+      setIsLoading(true);
+      const { name, phone_number } = data;
+      await sendContactMail(name, phone_number);
+
+      toast("Mensagem enviada com sucesso!", {
+        style: {
+          background: "green",
+          color: "white",
+        },
+      });
+      setIsError(false);
+      console.log("errors:", errors);
+    } catch (error) {
+      console.log(error);
+      toast(error.message, {
+        style: {
+          background: "red",
+          color: "white",
+        },
+      });
+      setIsError(true);
+      console.log("errors:", errors);
+    } finally {
+      setIsLoading(false);
+    }
+  };
   return (
     <Container id="contacts">
       <Header>
@@ -100,31 +151,36 @@ const Contacts = (ref) => {
         <div className="divider"></div>
         <p>
           Se interessou pelo meu trabalho? Fique a vontade para entrar em
-          contato comigo através do Formulário que busco responder o mais rápido
-          possível.
+          contato comigo através do Formulário abaixo ou chame diretamente no
+          WhatsApp.
         </p>
       </Header>
-      <ContainerForm onSubmit={handleSubmit(onSubmit)}>
+      <ContainerForm onSubmit={handleSubmit(onSubmit)} isError={isError}>
         <label htmlFor="name">Nome</label>
         <input
           type="text"
-          placeholder="Insira Seu Nome"
+          placeholder="Erick Oliveira"
           id="name"
           ref={ref}
           {...register("name")}
         />
-        <label htmlFor="email">Celular</label>
+        <span className="error-message">{errors.name?.message}</span>
+        <label htmlFor="phone_number">Celular</label>
         <InputMask
+          type="text"
           mask="(99)99999-9999"
           maskChar=""
-          type="text"
-          placeholder="Insira Seu Celular"
-          id="celular"
+          placeholder="(99)99999-9999"
+          id="phone_number"
           ref={ref}
-          {...register("celular")}
+          {...register("phone_number")}
         />
-
-        <Button title="Solicitar Orçamento agora" type="submit" />
+        <span className="error-message">{errors.phone_number?.message}</span>
+        <Button
+          title="Solicitar Orçamento agora"
+          type="submit"
+          disabled={isLoading}
+        />
       </ContainerForm>
     </Container>
   );

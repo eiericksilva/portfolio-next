@@ -149,10 +149,7 @@ const Projects = () => {
               <span>primeira assinatura de polpas do Brasil</span>, foi
               desenvolvida por mim para integrar o restante do site da empresa.
               Nela é possível encontrar informações referêntes a como se tornar
-              um afiliado da Polpee. O site é feito com <span>NextJS</span>,
-              então utilizei as bibliotecas <span>TailwindCSS</span> para
-              estilização e <span>TypeScript</span> para lidar com a tipagem dos
-              dados.
+              um afiliado da Polpee.
             </p>
             <div>
               <Link href="https://polpee.club/afiliados" target="_blank">

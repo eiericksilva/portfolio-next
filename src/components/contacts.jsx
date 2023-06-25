@@ -122,22 +122,10 @@ const Contacts = (ref) => {
       const { name, phone_number } = data;
       await sendContactMail(name, phone_number);
 
-      toast("Mensagem enviada com sucesso!", {
-        style: {
-          background: "green",
-          color: "white",
-        },
-      });
+      toast.success("Mensagem enviada com sucesso!");
       setIsError(false);
-      console.log("errors:", errors);
     } catch (error) {
-      console.log(error);
-      toast(error.message, {
-        style: {
-          background: "red",
-          color: "white",
-        },
-      });
+      toast.error(error.message);
       setIsError(true);
       console.log("errors:", errors);
     } finally {

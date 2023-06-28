@@ -25,6 +25,10 @@ const Header = styled.div`
     width: 20%;
     border: 2px solid var(--bg-accent);
   }
+
+  p {
+    margin-bottom: 40px;
+  }
 `;
 
 const Subtitle = styled.h3`

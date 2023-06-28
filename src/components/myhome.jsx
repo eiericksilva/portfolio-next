@@ -55,9 +55,10 @@ const MyHome = () => {
         <ContainerHeader>
           <Title>Olá, me chamo Erick Silva</Title>
           <p>
-            Programador responsável pela criação de Sites e Sistemas focado no
-            crescimento no meio digital das pequenas e médias empresas. É isso
-            que procura? Então não perca tempo e entre em contato comigo.{" "}
+            Programador responsável pela criação e manutenção de Sites focado em
+            tirar seu projeto do papel com um design <span>responsivo</span> e{" "}
+            <span>otimizado</span>. É isso que procura? Então não perca tempo e
+            entre em contato comigo.{" "}
           </p>
         </ContainerHeader>
         <Link href="/#contacts">

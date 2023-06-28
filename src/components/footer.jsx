@@ -101,6 +101,7 @@ const Footer = () => {
               <Link
                 href="https://www.linkedin.com/in/eiericksilva/"
                 target="_blank"
+                alt="Link para o Linkedin do desenvolvedor"
               >
                 <AiFillLinkedin size={30} />
               </Link>
@@ -109,12 +110,17 @@ const Footer = () => {
               <Link
                 href="https://www.instagram.com/eiericksilva.dev/"
                 target="_blank"
+                alt="Link para o Instagram pessoal do desenvolvedor"
               >
                 <AiFillInstagram size={30} />
               </Link>
             </li>
             <li>
-              <Link href="https://github.com/eiericksilva" target="_blank">
+              <Link
+                href="https://github.com/eiericksilva"
+                target="_blank"
+                alt="Link para o Repositório GitHub do desenvolvedor"
+              >
                 <AiFillGithub size={30} />
               </Link>
             </li>
@@ -122,6 +128,7 @@ const Footer = () => {
               <Link
                 href="https://api.whatsapp.com/send?phone=5533999501882&text=Ol%C3%A1,%20Erick!%20Vim%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20com%20voc%C3%AA."
                 target="_blank"
+                alt="Link para o WhatsApp do desenvolvedor"
               >
                 <AiOutlineWhatsApp size={30} />
               </Link>
@@ -134,6 +141,7 @@ const Footer = () => {
         <Link
           href="https://api.whatsapp.com/send?phone=5533999501882&text=Ol%C3%A1,%20Erick!%20Vim%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20com%20voc%C3%AA."
           target="_blank"
+          alt="Link para o WhatsApp do desenvolvedor"
         >
           <span>ERICK SILVA</span>
         </Link>

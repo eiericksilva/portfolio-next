@@ -19,7 +19,7 @@ const Container = styled.div`
     ),
     url(https://d33wubrfki0l68.cloudfront.net/daac8858fd4a0ccea44f59dfd079c3c16c263f33/c157c/assets/svg/common-bg.svg);
 `;
-const Header = styled.div`
+const Header = styled.header`
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -80,7 +80,7 @@ const ContainerForm = styled.form`
     border-radius: 5px;
 
     &::placeholder {
-      color: #4141417b;
+      color: #80808058;
     }
   }
 
@@ -147,7 +147,7 @@ const Contacts = (ref) => {
         <label htmlFor="name">Nome</label>
         <input
           type="text"
-          placeholder="Erick Oliveira"
+          placeholder="Insira seu nome"
           id="name"
           ref={ref}
           {...register("name")}

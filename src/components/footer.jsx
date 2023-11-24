@@ -108,7 +108,7 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                href="https://www.instagram.com/eiericksilva.dev/"
+                href="https://www.instagram.com/eiericksilva/"
                 target="_blank"
                 alt="Link para o Instagram pessoal do desenvolvedor"
               >

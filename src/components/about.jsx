@@ -152,7 +152,7 @@ const About = () => {
         <ContainerRight>
           <Subtitle>Meus Serviços</Subtitle>
           <ul>
-            <li>Crição de websites</li>
+            <li>Criação de websites</li>
             <li>Manutenção de websites</li>
             <li>Criação de Lojas Virtuais</li>
             <li>Manutenção de Lojas Virtuais</li>

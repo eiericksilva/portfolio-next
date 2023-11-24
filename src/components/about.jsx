@@ -132,7 +132,9 @@ const About = () => {
             aprendendo ao longo da carreira para trocar conhecimento com pessoas
             de várias áreas. Me siga no{" "}
             <span className="linkedin">
-              <Link href="/#footer">Linkedin</Link>
+              <Link href="https://www.linkedin.com/in/eiericksilva/">
+                Linkedin
+              </Link>
             </span>{" "}
             e saiba mais.
           </p>
@@ -148,7 +150,14 @@ const About = () => {
           </div>
         </ContainerLeft>
         <ContainerRight>
-          <Subtitle>Minhas Habilidades</Subtitle>
+          <Subtitle>Meus Serviços</Subtitle>
+          <ul>
+            <li>Crição de websites</li>
+            <li>Manutenção de websites</li>
+            <li>Criação de Lojas Virtuais</li>
+            <li>Manutenção de Lojas Virtuais</li>
+          </ul>
+          <Subtitle>Ferramentas</Subtitle>
           <ul>
             <li>HTML</li>
             <li>CSS</li>

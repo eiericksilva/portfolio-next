@@ -99,6 +99,37 @@ const Projects = () => {
           <ContainerLeft>
             <Image
               className="img-desktop"
+              src={Polpee}
+              width={600}
+              alt="Polpee banner"
+            ></Image>
+            <Image
+              className="img-mobile"
+              src={PolpeeMobile}
+              width={300}
+              alt="Polpee banner"
+            ></Image>
+          </ContainerLeft>
+          <ContainerRight>
+            <h3>Polpee: Página de Afiliados</h3>
+            <p>
+              A Página de afiliados do site da Polpee;{" "}
+              <span>primeira assinatura de polpas do Brasil</span>, foi
+              desenvolvida por mim para integrar o restante do site da empresa.
+              Nela é possível encontrar informações referêntes a como se tornar
+              um afiliado da Polpee.
+            </p>
+            <div>
+              <Link href="https://polpee.club/afiliados" target="_blank">
+                <Button title="VEJA O PROJETO" />
+              </Link>
+            </div>
+          </ContainerRight>
+        </ContainerProject>
+        <ContainerProject>
+          <ContainerLeft>
+            <Image
+              className="img-desktop"
               src={Dermato}
               width={600}
               alt="Dermato banner"
@@ -125,37 +156,6 @@ const Projects = () => {
             <Link href="https://dermato.vercel.app/" target="_blank">
               <Button title="VEJA O PROJETO" />
             </Link>
-          </ContainerRight>
-        </ContainerProject>
-        <ContainerProject>
-          <ContainerLeft>
-            <Image
-              className="img-desktop"
-              src={Polpee}
-              width={600}
-              alt="Polpee banner"
-            ></Image>
-            <Image
-              className="img-mobile"
-              src={PolpeeMobile}
-              width={300}
-              alt="Polpee banner"
-            ></Image>
-          </ContainerLeft>
-          <ContainerRight>
-            <h3>Polpee: Página de Afiliados</h3>
-            <p>
-              A Página de afiliados do site da Polpee;{" "}
-              <span>primeira assinatura de polpas do Brasil</span>, foi
-              desenvolvida por mim para integrar o restante do site da empresa.
-              Nela é possível encontrar informações referêntes a como se tornar
-              um afiliado da Polpee.
-            </p>
-            <div>
-              <Link href="https://polpee.club/afiliados" target="_blank">
-                <Button title="VEJA O PROJETO" />
-              </Link>
-            </div>
           </ContainerRight>
         </ContainerProject>
       </ProjectsWrapper>

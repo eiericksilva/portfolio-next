@@ -118,14 +118,17 @@ const Contacts = (ref) => {
   });
   const onSubmit = async (data) => {
     try {
+      console.log("DATA.NAME: " + data.name);
+      console.log("DATA.PHONE_NUMBER: " + data.phone_number);
       setIsLoading(true);
       const { name, phone_number } = data;
+
       await sendContactMail(name, phone_number);
 
       toast.success("Mensagem enviada com sucesso!");
       setIsError(false);
     } catch (error) {
-      toast.error(error.message);
+      toast.error("ERRO AO ENVIAR OS DADOS DO FORM É: " + error.message);
       setIsError(true);
       console.log("errors:", errors);
     } finally {

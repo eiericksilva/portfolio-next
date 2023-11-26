@@ -47,7 +47,7 @@ const Menu = () => {
           <Link href="/#projects">PROJETOS</Link>
         </li>
         <li>
-          <Link href="/#contacts">CONTATOS</Link>
+          <Link href="/#footer">CONTATOS</Link>
         </li>
       </ListItems>
     </Container>

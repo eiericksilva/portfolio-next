@@ -15,7 +15,7 @@ export default function Home() {
       <MyHome />
       <About />
       <Projects />
-      <Contacts />
+      {/* <Contacts /> */}
       <Footer />
       <Toaster position="top-right" />
     </main>
